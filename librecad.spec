@@ -17,6 +17,7 @@ License: 	GPLv2
 Group: 		Graphics
 BuildRequires: 	qt4-devel
 BuildRequires:	qt4-assistant
+BuildRequires:	qt4-linguist
 BuildRoot: 	%{_tmppath}/%{name}-%{version}-root
 Requires:	librecad-data
 Suggests:	librecad-doc
