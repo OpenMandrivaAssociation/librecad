@@ -16,6 +16,7 @@ URL: 		http://www.librecad.org
 License: 	GPLv2
 Group: 		Graphics
 BuildRequires: 	qt4-devel
+BuildRequires:	qt4-assistant
 BuildRoot: 	%{_tmppath}/%{name}-%{version}-root
 Requires:	librecad-data
 Suggests:	librecad-doc
