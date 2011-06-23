@@ -1,5 +1,5 @@
 %define	name	librecad
-%define	version	1.0.0beta5_144_g0046d99
+%define	version	1.0.0rc1_55_g4f9b7c5
 
 Summary: 	Computer-aided design (CAD) system
 Name: 		%{name}
