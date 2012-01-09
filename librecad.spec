@@ -1,21 +1,20 @@
 %define	name	librecad
 %define	version	1.0.0
 
-Summary: 	Computer-aided design (CAD) system
-Name: 		%{name}
-Version: 	%{version}
-Release: 	1
+Summary:	Computer-aided design (CAD) system
+Name:		%{name}
+Version:	%{version}
+Release:	1
 Source0:	librecad-%{version}.tar.bz2
 Patch0:		0001-Adding-DXF-.desktop-file.patch
 Patch1:		librecad-1.0.0-mdv-desktop.patch
 
-URL: 		http://www.librecad.org
-License: 	GPLv2
-Group: 		Graphics
-BuildRequires: 	qt4-devel
+URL:		http://www.librecad.org
+License:	GPLv2
+Group:		Graphics
+BuildRequires:	qt4-devel
 BuildRequires:	qt4-assistant
 BuildRequires:	qt4-linguist
-BuildRoot: 	%{_tmppath}/%{name}-%{version}-root
 Requires:	librecad-data
 Suggests:	librecad-doc
 Suggests:	librecad-plugins
@@ -30,7 +29,7 @@ and diagrams.
 Group:		Graphics
 Summary:	Platform-independant files for %{name}
 Requires:	%{name}
-BuildArch:      noarch
+BuildArch:	noarch
  
 %description data
 Contains the platform-independent files for LibreCAD, including
@@ -40,7 +39,7 @@ fonts, patterns, translations.
 #Group:		Graphics
 #Summary:	Documentation for %{name}
 #Requires:	%{name}
-#BuildArch:      noarch
+#BuildArch:	noarch
 # 
 #description doc
 #Documentation for %{name}, a Qt4 application to design 2D CAD
