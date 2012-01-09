@@ -1,12 +1,13 @@
 %define	name	librecad
-%define	version	1.0.0rc1.99.2
+%define	version	1.0.0
 
 Summary: 	Computer-aided design (CAD) system
 Name: 		%{name}
 Version: 	%{version}
 Release: 	1
 Source0:	librecad-%{version}.tar.bz2
-Patch0:	0001-Adding-DXF-.desktop-file.patch
+Patch0:		0001-Adding-DXF-.desktop-file.patch
+Patch1:		librecad-1.0.0-mdv-desktop.patch
 
 URL: 		http://www.librecad.org
 License: 	GPLv2
@@ -32,18 +33,18 @@ Requires:	%{name}
 BuildArch:      noarch
  
 %description data
-Contains the platform-independant files for LibreCAD, including
+Contains the platform-independent files for LibreCAD, including
 fonts, patterns, translations.
 
-%package doc
-Group:		Graphics
-Summary:	Documentation for %{name}
-Requires:	%{name}
-BuildArch:      noarch
- 
-%description doc
-Documentation for %{name}, a Qt4 application to design 2D CAD
-drawing based on the community edition of QCad.
+#package doc
+#Group:		Graphics
+#Summary:	Documentation for %{name}
+#Requires:	%{name}
+#BuildArch:      noarch
+# 
+#description doc
+#Documentation for %{name}, a Qt4 application to design 2D CAD
+#drawing based on the community edition of QCad.
 
 %package plugins
 Group:		Graphics
@@ -56,7 +57,9 @@ Contains the plugins files for LibreCAD.
 %prep
 %setup -q
 
-%apply_patches
+%patch0 -p1
+%patch1 -p1
+find . -type f -executable -a \( -name '*.cpp' -o -name '*.h' \) | xargs -i{} chmod 644 {}
 
 %build
 %qmake_qt4
@@ -68,7 +71,6 @@ pushd plugins
 popd
 
 %install
-rm -rf $RPM_BUILD_ROOT
 %makeinstall INSTALL_ROOT=%buildroot
  
 %{__install} -m 755 -d %{buildroot}%{_datadir}/%{name}/doc
@@ -80,8 +82,8 @@ rm -rf $RPM_BUILD_ROOT
 %{__install} -m 755 -d %{buildroot}%{_libdir}/%{name}/plugins
 %{__install} -m 755 -d %{buildroot}%{_datadir}/mime/packages
 
-%__cp unix/resources/doc/* %{buildroot}%{_datadir}/%{name}/doc/
-%__cp unix/resources/fonts/*.cxf %{buildroot}%{_datadir}/%{name}/fonts/
+#%__cp unix/resources/doc/* %{buildroot}%{_datadir}/%{name}/doc/
+%__cp unix/resources/fonts/*.lff %{buildroot}%{_datadir}/%{name}/fonts/
 %__cp -r unix/resources/library/* %{buildroot}%{_datadir}/%{name}/library/
 %__cp unix/resources/patterns/*.dxf %{buildroot}%{_datadir}/%{name}/patterns/
 %__cp unix/resources/qm/*.qm %{buildroot}%{_datadir}/%{name}/qm/
@@ -96,11 +98,7 @@ find %{buildroot}%{_datadir}/%{name} -type f -exec chmod 644 {} \;
 %{__install} -Dm 644 desktop/%{name}.sharedmimeinfo %{buildroot}%{_datadir}/mime/packages/%{name}.xml
 %{__install} -Dm 644 res/main/%{name}.png %{buildroot}%{_datadir}/pixmaps/%{name}.png
 
-%clean
-rm -rf $RPM_BUILD_ROOT
-
 %files
-%defattr(-,root,root,-)
 %doc LICENSE README
 %{_bindir}/%{name}
 %{_datadir}/applications/%{name}.desktop
@@ -108,16 +106,13 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/mime/packages/%{name}.xml
 
 %files data
-%defattr(-,root,root,-)
 %{_datadir}/%{name}/fonts/*
 %{_datadir}/%{name}/library/*
 %{_datadir}/%{name}/patterns/*
 %{_datadir}/%{name}/qm/*
 
-%files doc
-%defattr(-,root,root,-)
-%{_datadir}/%{name}/doc/*
+#files doc
+#%{_datadir}/%{name}/doc/*
 
 %files plugins
-%defattr(-,root,root,-)
 %{_libdir}/%{name}/plugins/*
