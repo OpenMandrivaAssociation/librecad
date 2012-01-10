@@ -4,6 +4,7 @@
 Summary:	Computer-aided design (CAD) system
 Name:		%{name}
 Version:	%{version}
+Epoch:		1
 Release:	1
 Source0:	librecad-%{version}.tar.bz2
 Patch0:		0001-Adding-DXF-.desktop-file.patch
