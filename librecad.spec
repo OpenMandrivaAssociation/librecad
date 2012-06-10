@@ -1,5 +1,5 @@
 %define	name	librecad
-%define	version	1.0.0
+%define	version	1.0.2
 
 Summary:	Computer-aided design (CAD) system
 Name:		%{name}
@@ -16,6 +16,7 @@ Group:		Graphics
 BuildRequires:	qt4-devel
 BuildRequires:	qt4-assistant
 BuildRequires:	qt4-linguist
+BuildRequires:	muparser-devel
 Requires:	librecad-data
 Suggests:	librecad-doc
 Suggests:	librecad-plugins
@@ -71,7 +72,7 @@ pushd plugins
 popd
 
 %install
-%makeinstall INSTALL_ROOT=%buildroot
+make install INSTALL_ROOT=%buildroot
  
 %{__install} -m 755 -d %{buildroot}%{_datadir}/%{name}/doc
 %{__install} -m 755 -d %{buildroot}%{_datadir}/%{name}/fonts
@@ -83,13 +84,11 @@ popd
 %{__install} -m 755 -d %{buildroot}%{_datadir}/mime/packages
 
 #%__cp unix/resources/doc/* %{buildroot}%{_datadir}/%{name}/doc/
-%__cp unix/resources/fonts/*.lff %{buildroot}%{_datadir}/%{name}/fonts/
-%__cp -r unix/resources/library/* %{buildroot}%{_datadir}/%{name}/library/
-%__cp unix/resources/patterns/*.dxf %{buildroot}%{_datadir}/%{name}/patterns/
-%__cp unix/resources/qm/*.qm %{buildroot}%{_datadir}/%{name}/qm/
-%__cp unix/resources/plugins/* %{buildroot}%{_libdir}/%{name}/plugins/
-%__mv gpl-2.0.txt LICENSE
-%__chmod 644 LICENSE
+cp -a unix/resources/fonts/*.lff %{buildroot}%{_datadir}/%{name}/fonts/
+cp -a unix/resources/library/* %{buildroot}%{_datadir}/%{name}/library/
+cp -a unix/resources/patterns/*.dxf %{buildroot}%{_datadir}/%{name}/patterns/
+cp -a unix/resources/qm/*.qm %{buildroot}%{_datadir}/%{name}/qm/
+cp -a unix/resources/plugins/* %{buildroot}%{_libdir}/%{name}/plugins/
 %__chmod 644 README
 find %{buildroot}%{_datadir}/%{name} -type f -exec chmod 644 {} \;
  
@@ -99,7 +98,7 @@ find %{buildroot}%{_datadir}/%{name} -type f -exec chmod 644 {} \;
 %{__install} -Dm 644 res/main/%{name}.png %{buildroot}%{_datadir}/pixmaps/%{name}.png
 
 %files
-%doc LICENSE README
+%doc README
 %{_bindir}/%{name}
 %{_datadir}/applications/%{name}.desktop
 %{_datadir}/pixmaps/%{name}.png
