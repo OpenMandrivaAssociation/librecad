@@ -115,3 +115,54 @@ find %{buildroot}%{_datadir}/%{name} -type f -exec chmod 644 {} \;
 
 %files plugins
 %{_libdir}/%{name}/plugins/*
+
+
+%changelog
+* Sun Jun 10 2012 Dmitry Mikhirev <dmikhirev@mandriva.org> 1:1.0.2-1
++ Revision: 804314
+- update to 1.0.2
+
+* Tue Jan 10 2012 Dmitry Mikhirev <dmikhirev@mandriva.org> 1:1.0.0-1
++ Revision: 759355
+- add Epoch: 1
+- remove Makefile and spec.in
+- remove BuildRoot tag, replace spaces with tabs
+- 1.0.0 final release
+
+* Wed Aug 17 2011 Alexandre Lissy <alissy@mandriva.com> 1.0.0rc1.99.2-1
++ Revision: 694859
+- Updating to latest git snapshot
+
+* Sat Aug 13 2011 Alexandre Lissy <alissy@mandriva.com> 1.0.0rc1.99.1-1
++ Revision: 694367
+- Adding missing source package for 1.0.0rc1.99.1
+- Update to latest snapshot, still pre RC2
+
+* Sat Aug 06 2011 Alexandre Lissy <alissy@mandriva.com> 1.0.0rc1.99-1
++ Revision: 693531
+- Updating to pre-RC2 snapshot and using new patches capabilities of gitrpm helper
+- Using 'mdv' branch for desktop file
+- Updating stuff for new gitrpm
+- Update for latest rpm-common changes
+- Introducing GitRPM funny stuff, see http://git.mandriva.com/projects/?p=users/alissy/gitrpm.git;a=summary
+
+* Thu Jun 23 2011 Alexandre Lissy <alissy@mandriva.com> 1.0.0rc1_55_g4f9b7c5-1
++ Revision: 686840
+- Updating from 1.0.0beta5 to 1.0.0rc1
+
+* Tue Jun 07 2011 Alexandre Lissy <alissy@mandriva.com> 1.0.0beta5_144_g0046d99-1
++ Revision: 683100
+- Updating to latest git revision
+- Dropping obsolete french locale patch
+
+* Sun Jun 05 2011 Alexandre Lissy <alissy@mandriva.com> 1.0.0beta5_132_gf21f8b2-1
++ Revision: 682785
+- Updating to latest git tree, and dropping merged patches.
+
+* Thu Jun 02 2011 Alexandre Lissy <alissy@mandriva.com> 1.0.0beta5_116_g88b5983-1
++ Revision: 682483
+- Fix missing BuildRequires against qt4-linguist
+- Fix missing BuildRequires against qt4-assistant (providing qcollectiongenerator)
+- Importing LibreCAD.
+- Created package structure for librecad.
+
