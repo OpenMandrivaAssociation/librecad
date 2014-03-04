@@ -1,0 +1,14 @@
+diff -U 3 -H -d -r -N -- a/src/lib/engine/rs_system.cpp b/src/lib/engine/rs_system.cpp
+--- a/librecad/src/lib/engine/rs_system.cpp	2011-08-14 07:28:00.000000000 +0200
++++ b/librecad/src/lib/engine/rs_system.cpp	2011-08-15 11:47:16.000000000 +0200
+@@ -530,6 +530,10 @@
+     }
+     RS_SETTINGS->endGroup();
+ 
++    if (subDirectory=="plugins") {
++        dirList.append("##LIBDIR##" + appDirName + "/" + subDirectory);
++    }
++
+     QStringList ret;
+ 
+     RS_DEBUG->print("RS_System::getDirectoryList: Paths:");
