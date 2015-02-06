@@ -3,7 +3,7 @@
 Summary:	Computer-aided design (CAD) system
 Name:		librecad
 Version:	2.0.2
-Release:	1
+Release:	2
 Epoch:		1
 License:	GPLv2+
 Group:		Graphics
