@@ -1,14 +1,14 @@
-%define commit 2241a8102d345f650502d12e3ab54e8387c2721a
+%define oname 	LibreCAD
 
 Summary:	Computer-aided design (CAD) system
 Name:		librecad
-Version:	2.0.2
-Release:	2
+Version:	2.0.5
+Release:	1
 Epoch:		1
 License:	GPLv2+
 Group:		Graphics
 Url:		http://www.librecad.org
-Source0:	https://github.com/LibreCAD/LibreCAD/archive/%{commit}/%{name}-%{version}.tar.gz
+Source0:	https://github.com/LibreCAD/LibreCAD/archive/%{oname}-%{version}.tar.gz
 Patch0:		librecad-1.0.0-mdv-desktop.patch
 Patch1:		librecad-2.0.2-install.patch
 Patch2:		librecad-2.0.2-plugindir.patch
@@ -69,7 +69,7 @@ Contains the plugins files for LibreCAD.
 #----------------------------------------------------------------------------
 
 %prep
-%setup -q -n LibreCAD-%{commit}
+%setup -q -n %{oname}-%{version}
 %patch0 -p1
 %patch1 -p1
 %patch2 -p1
