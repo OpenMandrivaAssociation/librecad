@@ -1,0 +1,11 @@
+diff -up LibreCAD-dbf1cc7c9597740d34a068f6f09c36841054e903/librecad/src/lib/engine/rs_spline.cpp.iota LibreCAD-dbf1cc7c9597740d34a068f6f09c36841054e903/librecad/src/lib/engine/rs_spline.cpp
+--- LibreCAD-dbf1cc7c9597740d34a068f6f09c36841054e903/librecad/src/lib/engine/rs_spline.cpp.iota	2016-06-06 10:43:16.010879824 -0400
++++ LibreCAD-dbf1cc7c9597740d34a068f6f09c36841054e903/librecad/src/lib/engine/rs_spline.cpp	2016-06-06 10:43:27.194800713 -0400
+@@ -26,6 +26,7 @@
+ 
+ #include<iostream>
+ #include<cmath>
++#include<numeric>
+ #include "rs_spline.h"
+ 
+ 

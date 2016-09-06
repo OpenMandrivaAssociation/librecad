@@ -1,0 +1,26 @@
+diff -up LibreCAD-dbf1cc7c9597740d34a068f6f09c36841054e903/librecad/src/boost.pri.gcc6 LibreCAD-dbf1cc7c9597740d34a068f6f09c36841054e903/librecad/src/boost.pri
+--- LibreCAD-dbf1cc7c9597740d34a068f6f09c36841054e903/librecad/src/boost.pri.gcc6	2016-06-06 11:47:24.087659733 -0400
++++ LibreCAD-dbf1cc7c9597740d34a068f6f09c36841054e903/librecad/src/boost.pri	2016-06-06 11:47:27.439636022 -0400
+@@ -113,7 +113,7 @@ unix {
+     }
+ 
+ 
+-    INCLUDEPATH += $${BOOST_INCDIR}
++    # INCLUDEPATH += $${BOOST_INCDIR}
+     HEADERS += $${BOOST_INCDIR}
+ 
+     !isEmpty( BOOST_LIBS ) {
+diff -up LibreCAD-dbf1cc7c9597740d34a068f6f09c36841054e903/librecad/src/muparser.pri.gcc6 LibreCAD-dbf1cc7c9597740d34a068f6f09c36841054e903/librecad/src/muparser.pri
+--- LibreCAD-dbf1cc7c9597740d34a068f6f09c36841054e903/librecad/src/muparser.pri.gcc6	2016-06-05 02:27:45.000000000 -0400
++++ LibreCAD-dbf1cc7c9597740d34a068f6f09c36841054e903/librecad/src/muparser.pri	2016-06-06 11:46:11.508173138 -0400
+@@ -2,9 +2,7 @@
+ macx|win32|equals(build_muparser, "true")|!packagesExist(muparser){
+     message("Using bundled muparser")
+ 	MUPARSER_DIR = ../../libraries/muparser
+-	DEPENDPATH += $$MUPARSER_DIR/include \
+-				$$MUPARSER_DIR/src
+-	INCLUDEPATH += $$MUPARSER_DIR/include
++	DEPENDPATH += $$MUPARSER_DIR/src
+ 	GEN_LIB_DIR = ../../generated/lib
+ 	LIBS += -L$$GEN_LIB_DIR -lmuparser
+ 	PRE_TARGETDEPS += $$GEN_LIB_DIR/libmuparser.a

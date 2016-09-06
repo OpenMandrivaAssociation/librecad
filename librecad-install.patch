@@ -1,0 +1,12 @@
+diff -up LibreCAD-d6d8941c1a8c244b08af74dbe1cfed84ef103b92/scripts/postprocess-unix.sh.install LibreCAD-d6d8941c1a8c244b08af74dbe1cfed84ef103b92/scripts/postprocess-unix.sh
+--- LibreCAD-d6d8941c1a8c244b08af74dbe1cfed84ef103b92/scripts/postprocess-unix.sh.install	2014-11-05 12:07:37.614821157 -0500
++++ LibreCAD-d6d8941c1a8c244b08af74dbe1cfed84ef103b92/scripts/postprocess-unix.sh	2014-11-05 12:08:35.524442102 -0500
+@@ -3,7 +3,7 @@
+ THISDIR="`pwd`"
+ LCDIR="${THISDIR}/librecad"
+ PIDIR="${THISDIR}/plugins"
+-RESOURCEDIR="${THISDIR}/unix/resources"
++RESOURCEDIR=$BUILDDIR
+ APPDATADIR="${THISDIR}/unix/appdata"
+ TSDIRLC="${LCDIR}/ts"
+ TSDIRPI="${PIDIR}/ts"
