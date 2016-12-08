@@ -4,7 +4,7 @@
 # This file and all modifications and additions to the pristine
 # package are under the same license as the package itself.
 Name:			librecad
-Version:		2.1.1
+Version:		2.1.3
 Release:		1
 Summary:		Computer Assisted Design (CAD) Application
 License:		GPLv2 and GPLv2+
@@ -18,8 +18,8 @@ Source3:		Electronic8-LCAD.zip
 Patch1:			librecad-desktop.patch
 Patch2:			librecad-install.patch
 Patch3:			librecad-plugindir.patch
-Patch5:			librecad-sys-iota.patch
-Patch6:			librecad-gcc6.patch
+#Patch5:			librecad-sys-iota.patch
+#Patch6:			librecad-gcc6.patch
 BuildRequires:		boost-devel
 BuildRequires:		fonts-ttf-wqy-microhei
 BuildRequires:		qt5-devel
