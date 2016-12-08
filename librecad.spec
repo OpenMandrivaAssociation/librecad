@@ -2,14 +2,14 @@
 
 Summary:	Computer-aided design (CAD) system
 Name:		librecad
-Version:	2.0.5
+Version:	2.0.11
 Release:	1
 Epoch:		1
 License:	GPLv2+
 Group:		Graphics
 Url:		http://www.librecad.org
 Source0:	https://github.com/LibreCAD/LibreCAD/archive/%{oname}-%{version}.tar.gz
-Patch0:		librecad-1.0.0-mdv-desktop.patch
+#Patch0:		librecad-1.0.0-mdv-desktop.patch
 Patch1:		librecad-2.0.2-install.patch
 Patch2:		librecad-2.0.2-plugindir.patch
 BuildRequires:	boost-devel

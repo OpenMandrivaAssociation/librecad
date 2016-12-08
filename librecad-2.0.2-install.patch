@@ -18,6 +18,6 @@ diff -up LibreCAD-f87828ec55def73aaa8c3c3e158fc1abc8171b63/scripts/postprocess-u
  PIDIR="${THISDIR}/plugins"
 -RESOURCEDIR="${THISDIR}/unix/resources"
 +RESOURCEDIR=$BUILDDIR
+ APPDATADIR="${THISDIR}/unix/appdata"
  TSDIRLC="${LCDIR}/ts"
  TSDIRPI="${PIDIR}/ts"
- SPTDIR="${LCDIR}/support"
