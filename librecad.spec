@@ -18,6 +18,7 @@ Source3:		Electronic8-LCAD.zip
 Patch1:			librecad-desktop.patch
 Patch2:			librecad-install.patch
 Patch3:			librecad-plugindir.patch
+Patch4:			librecad-2.1.3-qt-5.12.patch
 #Patch5:			librecad-sys-iota.patch
 #Patch6:			librecad-gcc6.patch
 BuildRequires:		boost-devel

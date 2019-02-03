@@ -1,0 +1,11 @@
+diff -up LibreCAD-2.1.3/librecad/src/ui/generic/widgetcreator.cpp.omv~ LibreCAD-2.1.3/librecad/src/ui/generic/widgetcreator.cpp
+--- LibreCAD-2.1.3/librecad/src/ui/generic/widgetcreator.cpp.omv~	2019-02-03 18:50:47.444673949 +0100
++++ LibreCAD-2.1.3/librecad/src/ui/generic/widgetcreator.cpp	2019-02-03 18:50:56.357771386 +0100
+@@ -30,6 +30,7 @@
+ #include <QSettings>
+ #include <QLineEdit>
+ #include <QPushButton>
++#include <QActionGroup>
+ 
+ WidgetCreator::WidgetCreator(QWidget* parent,
+                              QMap<QString, QAction*>& actions,
