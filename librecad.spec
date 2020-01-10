@@ -76,7 +76,7 @@ Pattern files for LibreCAD.
 
 %prep
 %setup -qn LibreCAD-%{version} -a 2 -a 3
-%apply_patches
+%autopatch -p1
 sed -i 's|##LIBDIR##|%{_libdir}|g' librecad/src/lib/engine/rs_system.cpp
 sed -i 's|$${DXFRW_INCLUDEDIR}|%{dxfrw_includedir}|g' librecad/src/src.pro
 
