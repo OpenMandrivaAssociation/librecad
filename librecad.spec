@@ -3,14 +3,15 @@
 # Copyright (c) 2010-2012 Rallaz
 # This file and all modifications and additions to the pristine
 # package are under the same license as the package itself.
+%define beta rc2
 Name:			librecad
-Version:		2.1.3
-Release:		1
+Version:		2.2.0
+Release:		%{?beta:0.%{beta}.}1
 Summary:		Computer Assisted Design (CAD) Application
 License:		GPLv2 and GPLv2+
 URL:			http://librecad.org/
 Group:			Graphics
-Source0:		https://github.com/LibreCAD/LibreCAD/archive/%{version}.tar.gz
+Source0:		https://github.com/LibreCAD/LibreCAD/archive/%{version}%{?beta:-%{beta}}.tar.gz
 Source1:		ttf2lff.1
 # GPL licensed parts files
 Source2:		Architect8-LCAD.zip
@@ -75,7 +76,7 @@ BuildArch:	noarch
 Pattern files for LibreCAD.
 
 %prep
-%setup -qn LibreCAD-%{version} -a 2 -a 3
+%setup -qn LibreCAD-%{version}%{?beta:-%{beta}} -a 2 -a 3
 %autopatch -p1
 sed -i 's|##LIBDIR##|%{_libdir}|g' librecad/src/lib/engine/rs_system.cpp
 sed -i 's|$${DXFRW_INCLUDEDIR}|%{dxfrw_includedir}|g' librecad/src/src.pro
@@ -126,7 +127,9 @@ cp -a Electronic8-LCAD %{buildroot}%{_datadir}/%{name}/library/electronics
 
 %{_bindir}/desktop-file-validate %{buildroot}/%{_datadir}/applications/%{name}.desktop
 
-%files
+%find_lang %{name} --all-name --with-qt
+
+%files -f %{name}.lang
 %doc LICENSE README.md
 %doc %{_mandir}/man1/%{name}.1*
 %doc %{_mandir}/man1/ttf2lff.1*
@@ -143,7 +146,7 @@ cp -a Electronic8-LCAD %{buildroot}%{_datadir}/%{name}/library/electronics
 %{_includedir}/%{name}/
 
 %files fonts
-%doc LICENSE LICENSE_Apache2.txt LICENSE_GPLv3.txt
+%doc LICENSE
 %dir %{_datadir}/%{name}/
 %{_datadir}/%{name}/fonts/
 
