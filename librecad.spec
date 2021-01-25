@@ -26,6 +26,7 @@ BuildRequires:		boost-devel
 BuildRequires:		fonts-ttf-wqy-microhei
 BuildRequires:		qt5-devel
 BuildRequires:		pkgconfig(Qt5Svg)
+BuildRequires:		pkgconfig(freetype2)
 BuildRequires:		muparser-devel
 
 Requires:		%{name}-fonts = %{version}-%{release}
