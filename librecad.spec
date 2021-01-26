@@ -28,6 +28,7 @@ BuildRequires:		qt5-devel
 BuildRequires:		pkgconfig(Qt5Svg)
 BuildRequires:		pkgconfig(freetype2)
 BuildRequires:		muparser-devel
+BuildRequires:		qt5-linguist-tools
 
 Requires:		%{name}-fonts = %{version}-%{release}
 Requires:		%{name}-langs = %{version}-%{release}
