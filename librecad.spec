@@ -3,7 +3,7 @@
 # Copyright (c) 2010-2012 Rallaz
 # This file and all modifications and additions to the pristine
 # package are under the same license as the package itself.
-%define beta rc2
+%define beta rc3
 Name:			librecad
 Version:		2.2.0
 Release:		%{?beta:0.%{beta}.}1
@@ -16,7 +16,6 @@ Source1:		ttf2lff.1
 # GPL licensed parts files
 Source2:		Architect8-LCAD.zip
 Source3:		Electronic8-LCAD.zip
-Patch1:			librecad-desktop.patch
 Patch2:			librecad-install.patch
 Patch3:			librecad-plugindir.patch
 Patch4:			librecad-2.1.3-qt-5.12.patch

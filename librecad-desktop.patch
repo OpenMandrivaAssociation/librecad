@@ -1,8 +1,0 @@
---- a/desktop/librecad.desktop	2011-05-19 17:24:55.000000000 +0200
-+++ b/desktop/librecad.desktop	2011-05-20 16:24:56.000000000 +0200
-@@ -8,4 +8,4 @@
- Exec=librecad %F
- Icon=librecad
- Categories=Graphics;Engineering;
--MimeType=image/vnd.dxf
-+MimeType=image/vnd.dxf;
