@@ -11,7 +11,7 @@ Summary:		Computer Assisted Design (CAD) Application
 License:		GPLv2 and GPLv2+
 URL:			http://librecad.org/
 Group:			Graphics
-Source0:		https://github.com/LibreCAD/LibreCAD/archive/%{version}.tar.gz
+Source0:		https://github.com/LibreCAD/LibreCAD/archive/%{version}%{?beta:-%{beta}}.tar.gz
 Source1:		ttf2lff.1
 # GPL licensed parts files
 Source2:		Architect8-LCAD.zip
