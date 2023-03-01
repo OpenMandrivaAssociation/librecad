@@ -6,7 +6,7 @@
 %define beta rc3
 Name:			librecad
 Version:		2.2.0
-Release:	  1
+Release:	        1
 Summary:		Computer Assisted Design (CAD) Application
 License:		GPLv2 and GPLv2+
 URL:			http://librecad.org/
