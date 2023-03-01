@@ -104,7 +104,7 @@ mv unix/resources/plugins/* %{buildroot}%{_libdir}/%{name}/plugins/
 %{__install} -Dpm 755 -s unix/%{name} %{buildroot}%{_bindir}/%{name}
 %{__install} -Dpm 755 -s unix/ttf2lff %{buildroot}%{_bindir}/ttf2lff
 %{__install} -Dpm 644 desktop/%{name}.desktop %{buildroot}%{_datadir}/applications/%{name}.desktop
-%{__install} -Dpm 644 unix/appdata/%{name}.appdata.xml  %{buildroot}%{_datadir}/appdata/%{name}.appdata.xml
+%{__install} -Dpm 644 desktop/org.librecad.librecad.appdata.xml  %{buildroot}%{_datadir}/metainfo/org.librecad.librecad.appdata.xml
 %{__install} -Dpm 644 librecad/res/main/%{name}.png %{buildroot}%{_datadir}/pixmaps/%{name}.png
 %{__install} -Dpm 644 desktop/%{name}.sharedmimeinfo %{buildroot}%{_datadir}/mime/packages/%{name}.xml
 %{__install} -Dpm 644 desktop/%{name}.1 %{buildroot}%{_mandir}/man1/%{name}.1
@@ -137,7 +137,7 @@ cp -a Electronic8-LCAD %{buildroot}%{_datadir}/%{name}/library/electronics
 %{_bindir}/%{name}
 %{_bindir}/ttf2lff
 %{_datadir}/applications/%{name}.desktop
-%{_datadir}/appdata/%{name}.appdata.xml
+%{_datadir}/metainfo/org.librecad.librecad.appdata.xml
 %{_datadir}/pixmaps/%{name}.png
 %{_datadir}/mime/packages/%{name}.xml
 %dir %{_datadir}/%{name}
