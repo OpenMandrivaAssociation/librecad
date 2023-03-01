@@ -3,7 +3,7 @@
 # Copyright (c) 2010-2012 Rallaz
 # This file and all modifications and additions to the pristine
 # package are under the same license as the package itself.
-%define beta rc3
+# %define beta rc3
 Name:			librecad
 Version:		2.2.0
 Release:	        1
