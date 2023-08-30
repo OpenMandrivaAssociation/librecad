@@ -5,7 +5,7 @@
 # package are under the same license as the package itself.
 #define beta rc3
 Name:			librecad
-Version:		2.2.0.1
+Version:		2.2.0.2
 Release:	        1
 Summary:		Computer Assisted Design (CAD) Application
 License:		GPLv2 and GPLv2+
